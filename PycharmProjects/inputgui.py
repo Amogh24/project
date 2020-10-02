@@ -83,4 +83,4 @@ def getinfo():
     root.mainloop()
 getinfo()
 
-print(data)
+
