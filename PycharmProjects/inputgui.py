@@ -83,4 +83,5 @@ def getinfo():
     root.mainloop()
 getinfo()
 
-
+for i in data:
+    print(i)
