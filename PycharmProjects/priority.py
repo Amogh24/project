@@ -20,7 +20,7 @@ for a in data:
 
 
 
-heap2.heapify(data)
+heap.heapify(data)
 
 for b in data:
     print(b)
