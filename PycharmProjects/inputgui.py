@@ -14,11 +14,10 @@ def addinfo():
     typeOfFlight=variable.get()
     nameOfFlight=nameOfFlightEntry.get()
     flightNo=flightNoEntry.get()
-    hr=int(hrEntry.get())
-    min=int(minEntry.get())
+    time=int(hrEntry.get())*60 + int(minEntry.get())
     startBufferTime=int(startBufferTimeEntry.get())
     endBufferTime=int(endBufferTimeEntry.get())
-    a=[typeOfFlight,nameOfFlight,flightNo,hr,min,startBufferTime,endBufferTime]
+    a=[typeOfFlight,time,startBufferTime,endBufferTime,nameOfFlight,flightNo]
     data.append(a)
     getinfo()
 
@@ -26,11 +25,10 @@ def addinfoanddestroy():
     typeOfFlight = variable.get()
     nameOfFlight = nameOfFlightEntry.get()
     flightNo = flightNoEntry.get()
-    hr = int(hrEntry.get())
-    min = int(minEntry.get())
+    time=int(hrEntry.get())*60 + int(minEntry.get())
     startBufferTime = int(startBufferTimeEntry.get())
     endBufferTime = int(endBufferTimeEntry.get())
-    a = [typeOfFlight, nameOfFlight, flightNo, hr, min, startBufferTime, endBufferTime]
+    a=[typeOfFlight,time,startBufferTime,endBufferTime,nameOfFlight,flightNo]
     data.append(a)
     root.destroy()
 
@@ -41,7 +39,6 @@ def getinfo():
     lb1.place(relx=0.3,rely=0.095, relwidth=0.15, relheight=0.05)
 
     typeOfFlightEntry = OptionMenu(root,variable, *options)
-    #typeOfFlightEntry = Entry(bg='#C4C4C4')
     typeOfFlightEntry.place(relx=0.5,rely=0.1, relwidth=0.3, relheight=0.05)
 
     lb2 = Label(text="Name of Airline : ",bg="#121212",fg='white',font=("Times new Roman", 24))
